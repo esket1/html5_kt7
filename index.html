@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Локальное файловое хранилище</title>
+    <style>
+        .dragover {
+            background-color: whitesmoke;
+            border-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <label>
+            Выберите файл
+            <input type="file" id="fileInput" multiple>
+        </label>
+        <span id="selectedFile">Файл не выбран</span>
+    </div>
+
+    <div id="dropArea" style="border: 2px dashed #ccc; padding: 15px; margin: 10px 0; text-align: center;">
+        Или перетащите файлы сюда
+    </div>
+
+    <div>
+        <span>Фильтр по типу:</span>
+        <select id="typeFilter">
+            <option value="all">Все типы</option>
+            <option value="image">Изображения</option>
+            <option value="text">Текстовые</option>
+            <option value="application">Приложения</option>
+            <option value="other">Другие</option>
+        </select>
+
+        <span>Фильтр по размеру (байт):</span>
+        <input type="number" id="sizeFilter" placeholder="Все размеры" min="0">
+    </div>
+
+    <div id="filesList">
+        <div>Нет файлов для отображения</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
