@@ -5,19 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Локальное файловое хранилище</title>
-    <style>
-        .dragover {
-            background-color: whitesmoke;
-            border-color: blue;
-        }
-    </style>
 </head>
 
 <body>
     <div>
         <label>
             Выберите файл
-            <input type="file" id="fileInput" multiple>
+            <input type="file" multiple id="fileInput">
         </label>
         <span id="selectedFile">Файл не выбран</span>
     </div>
@@ -29,18 +23,18 @@
     <div>
         <span>Фильтр по типу:</span>
         <select id="typeFilter">
-            <option value="all">Все типы</option>
-            <option value="image">Изображения</option>
-            <option value="text">Текстовые</option>
-            <option value="application">Приложения</option>
-            <option value="other">Другие</option>
+            <option value="all">All types</option>
+            <option value="image">Image</option>
+            <option value="text">Text</option>
+            <option value="application">Application</option>
+            <option value="other">Other types</option>
         </select>
 
         <span>Фильтр по размеру (байт):</span>
         <input type="number" id="sizeFilter" placeholder="Все размеры" min="0">
     </div>
 
-    <div id="filesList">
+    <div id="filesContainer">
         <div>Нет файлов для отображения</div>
     </div>
 
